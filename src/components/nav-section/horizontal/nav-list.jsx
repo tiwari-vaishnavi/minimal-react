@@ -52,7 +52,7 @@ export default function NavList({ data, depth, slotProps }) {
         hasChild={!!data.children}
         currentRole={slotProps?.currentRole}
         //
-        active={active}
+        active
         sx={depth === 1 ? slotProps?.rootItem : slotProps?.subItem}
       />
 
