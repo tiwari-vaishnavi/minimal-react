@@ -4,6 +4,7 @@ import ThemeProvider from './theme'
 import { SettingsDrawer, SettingsProvider } from './components/settings';
 import {MotionLazy} from './components/animate/motion-lazy'
 import Layout from './components/layout';
+import BankingPage from './pages/banking/banking';
 function App() {
   return (
             <SettingsProvider
@@ -20,6 +21,7 @@ function App() {
                 <MotionLazy>
                       <SettingsDrawer />
                       <Layout>
+                        <BankingPage/>
                       </Layout>
                 </MotionLazy>
               </ThemeProvider>

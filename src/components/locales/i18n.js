@@ -13,7 +13,7 @@ import { localStorageGetItem } from '../utils/storage-available';
 
 // ----------------------------------------------------------------------
 
-const lng = localStorageGetItem('i18nextLng', defaultLang.value);
+const lng = localStorageGetItem( defaultLang.value);
 
 i18n
   .use(LanguageDetector)
