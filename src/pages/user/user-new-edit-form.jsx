@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
 import React, { useMemo, useCallback } from 'react';
-import { useForm, Controller,FormProvider } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { fData } from '../../components/utils/format-number';
 
@@ -9,7 +9,6 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import Switch from '@mui/material/Switch';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
@@ -21,7 +20,6 @@ import RHFSwitch from '../../components/hook-form/rhf-switch';
 import RHFTextField from '../../components/hook-form/rhf-text-field';
 import RHFAutocomplete from '../../components/hook-form/rhf-autocomplete';
 import Label from '../../components/label';
-
 
 export default function UserNewEditForm({ }) {
 
@@ -137,21 +135,6 @@ export default function UserNewEditForm({ }) {
             {currentUser && (
               <FormControlLabel
                 labelPlacement="start"
-                control={
-                  <Controller
-                    name="status"
-                    control={control}
-                    render={({ field }) => (
-                      <Switch
-                        {...field}
-                        checked={field.value !== 'active'}
-                        onChange={(event) =>
-                          field.onChange(event.target.checked ? 'banned' : 'active')
-                        }
-                      />
-                    )}
-                  />
-                }
                 label={
                   <>
                     <Typography variant="subtitle2" sx={{ mb: 0.5 }}>

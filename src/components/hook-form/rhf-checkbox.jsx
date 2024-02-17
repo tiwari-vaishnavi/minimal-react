@@ -15,10 +15,7 @@ export function RHFCheckbox({ name, helperText, ...other }) {
   const { control } = useFormContext();
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+   
         <div>
           <FormControlLabel control={<Checkbox {...field} checked={field.value} />} {...other} />
 
@@ -27,9 +24,6 @@ export function RHFCheckbox({ name, helperText, ...other }) {
           )}
         </div>
       )}
-    />
-  );
-}
 
 RHFCheckbox.propTypes = {
   helperText: PropTypes.string,

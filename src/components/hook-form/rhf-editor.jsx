@@ -28,10 +28,7 @@ export default function RHFEditor({ name, helperText, ...other }) {
   }, [isSubmitSuccessful, name, setValue, values]);
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+   
         <Editor
           id={name}
           value={field.value}
@@ -47,9 +44,6 @@ export default function RHFEditor({ name, helperText, ...other }) {
           {...other}
         />
       )}
-    />
-  );
-}
 
 RHFEditor.propTypes = {
   helperText: PropTypes.string,

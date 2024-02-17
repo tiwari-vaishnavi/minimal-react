@@ -25,10 +25,7 @@ export default function RHFRadioGroup({
   const labelledby = label ? `${name}-${label}` : '';
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+   
         <FormControl component="fieldset">
           {label && (
             <FormLabel component="legend" id={labelledby} sx={{ typography: 'body2' }}>
@@ -65,10 +62,6 @@ export default function RHFRadioGroup({
           )}
         </FormControl>
       )}
-    />
-  );
-}
-
 RHFRadioGroup.propTypes = {
   helperText: PropTypes.string,
   label: PropTypes.string,

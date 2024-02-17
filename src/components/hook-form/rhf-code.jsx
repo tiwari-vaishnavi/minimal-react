@@ -11,10 +11,7 @@ export default function RHFCode({ name, ...other }) {
   const { control } = useFormContext();
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+    
         <div>
           <MuiOtpInput
             {...field}
@@ -35,9 +32,7 @@ export default function RHFCode({ name, ...other }) {
           )}
         </div>
       )}
-    />
-  );
-}
+    
 
 RHFCode.propTypes = {
   name: PropTypes.string,

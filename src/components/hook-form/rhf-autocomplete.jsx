@@ -11,7 +11,6 @@ import { countries } from '../../assets/data/countries';
 
 import Iconify from '../iconify/iconify';
 
-// ----------------------------------------------------------------------
 
 export default function RHFAutocomplete({ name, label, type, helperText, placeholder, ...other }) {
   const { control, setValue } = useFormContext();
@@ -19,12 +18,7 @@ export default function RHFAutocomplete({ name, label, type, helperText, placeho
   const { multiple } = other;
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => {
-        if (type === 'country') {
-          return (
+  
             <Autocomplete
               {...field}
               id={`autocomplete-${name}`}
@@ -112,42 +106,7 @@ export default function RHFAutocomplete({ name, label, type, helperText, placeho
           );
         }
 
-        return (
-          <Autocomplete
-            {...field}
-            id={`autocomplete-${name}`}
-            onChange={(event, newValue) => setValue(name, newValue, { shouldValidate: true })}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label={label}
-                placeholder={placeholder}
-                error={!!error}
-                helperText={error ? error?.message : helperText}
-                inputProps={{
-                  ...params.inputProps,
-                  autoComplete: 'new-password',
-                }}
-              />
-            )}
-            {...other}
-          />
-        );
-      }}
-    />
-  );
-}
-
-RHFAutocomplete.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  label: PropTypes.string,
-  helperText: PropTypes.node,
-  placeholder: PropTypes.string,
-};
-
-// ----------------------------------------------------------------------
-
+       
 export function getCountry(inputValue) {
   const option = countries.filter((country) => country.label === inputValue)[0];
 

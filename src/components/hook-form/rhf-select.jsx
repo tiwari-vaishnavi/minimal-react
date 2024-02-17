@@ -26,10 +26,7 @@ export function RHFSelect({
   const { control } = useFormContext();
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+  
         <TextField
           {...field}
           select
@@ -55,9 +52,6 @@ export function RHFSelect({
           {children}
         </TextField>
       )}
-    />
-  );
-}
 
 RHFSelect.propTypes = {
   PaperPropsSx: PropTypes.object,

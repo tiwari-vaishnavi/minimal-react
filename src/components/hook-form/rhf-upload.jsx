@@ -10,10 +10,7 @@ export function RHFUploadAvatar({ name, ...other }) {
   const { control } = useFormContext();
 
   return (
-    <Controller
-      name={name}
-      control={control}
-      render={({ field, fieldState: { error } }) => (
+    
         <div>
           <UploadAvatar error={!!error} file={field.value} {...other} />
 
@@ -24,9 +21,7 @@ export function RHFUploadAvatar({ name, ...other }) {
           )}
         </div>
       )}
-    />
-  );
-}
+    
 
 RHFUploadAvatar.propTypes = {
   name: PropTypes.string,
