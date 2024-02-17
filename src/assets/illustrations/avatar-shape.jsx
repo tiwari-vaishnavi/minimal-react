@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
@@ -33,4 +33,4 @@ AvatarShape.propTypes = {
   sx: PropTypes.object,
 };
 
-export default memo(AvatarShape);
+export default React.memo(AvatarShape);
