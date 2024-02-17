@@ -4,26 +4,31 @@ import ThemeProvider from './theme'
 import { SettingsDrawer, SettingsProvider } from './components/settings';
 import {MotionLazy} from './components/animate/motion-lazy'
 import Layout from './components/layout';
+import { LocalizationProvider } from './components/locales';
+import OrderListPage from './pages/order/list';
 function App() {
   return (
-            <SettingsProvider
-              defaultSettings={{
-                themeMode: 'light', // 'light' | 'dark'
-                themeDirection: 'ltr', //  'rtl' | 'ltr'
-                themeContrast: 'default', // 'default' | 'bold'
-                themeLayout: 'vertical', // 'vertical' | 'horizontal' | 'mini'
-                themeColorPresets: 'default', // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
-                themeStretch: false,
-              }}
-            >
-              <ThemeProvider>
-                <MotionLazy>
-                      <SettingsDrawer />
-                      <Layout>
-                      </Layout>
-                </MotionLazy>
-              </ThemeProvider>
-            </SettingsProvider>
+    <LocalizationProvider>
+      <SettingsProvider
+        defaultSettings={{
+          themeMode: "light", // 'light' | 'dark'
+          themeDirection: "ltr", //  'rtl' | 'ltr'
+          themeContrast: "default", // 'default' | 'bold'
+          themeLayout: "vertical", // 'vertical' | 'horizontal' | 'mini'
+          themeColorPresets: "default", // 'default' | 'cyan' | 'purple' | 'blue' | 'orange' | 'red'
+          themeStretch: false,
+        }}
+      >
+        <ThemeProvider>
+          <MotionLazy>
+            <SettingsDrawer />
+            <Layout>
+              <OrderListPage />
+            </Layout>
+          </MotionLazy>
+        </ThemeProvider>
+      </SettingsProvider>
+    </LocalizationProvider>
   );
 }
 
