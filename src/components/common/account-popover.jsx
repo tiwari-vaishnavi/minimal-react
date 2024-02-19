@@ -45,7 +45,6 @@ export default function AccountPopover() {
         whileTap="tap"
         whileHover="hover"
         variants={varHover(1.05)}
-        onClick={popover.onOpen}
         sx={{
           width: 40,
           height: 40,

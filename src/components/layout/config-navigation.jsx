@@ -214,11 +214,6 @@ export function useNavData() {
         subheader: t(t('other_cases')),
         items: [
           {
-            // default roles : All roles can see this entry.
-            // roles: ['user'] Only users can see this item.
-            // roles: ['admin'] Only admin can see this item.
-            // roles: ['admin', 'manager'] Only admin/manager can see this item.
-            // Reference from 'src/guards/RoleBasedGuard'.
             title: t('item_by_roles'),
             icon: ICONS.lock,
             roles: ['admin', 'manager'],

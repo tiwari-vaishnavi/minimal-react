@@ -117,7 +117,6 @@ export default function LayoutOptions({ options, value, onChange }) {
         return (
           <ButtonBase
             key={option}
-            onClick={() => onChange(option)}
             sx={{
               p: 0,
               width: 1,
