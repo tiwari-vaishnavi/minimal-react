@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import React from 'react'
+
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 
@@ -16,7 +16,7 @@ function CheckInIllustration({ ...other }) {
 
   const PRIMARY_DARK = theme.palette.primary.dark;
 
-  const PRIMARY_DARKER = theme.palette.primary;
+  const PRIMARY_DARKER = theme.palette.primary.darker;
 
   return (
     <Box
