@@ -1,29 +1,30 @@
-import PropTypes from 'prop-types';
-import { Controller, useFormContext } from 'react-hook-form';
-import Chip from '@mui/material/Chip';
 import React from 'react';
+import { Controller, useFormContext } from 'react-hook-form';
 
+import Chip from '@mui/material/Chip';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { countries } from '../../assets/data/countries';
+import { countries } from '../../assets/data';
 
-import Iconify from '../iconify/iconify';
+import Iconify from '../../components/iconify';
 
+// ----------------------------------------------------------------------
 
-export default function RHFAutocomplete({ name, label, type, helperText, placeholder, ...other }) {
+export default function RHFAutocomplete({ name, error, field, label, type, helperText, placeholder, ...other }) {
   const { control, setValue } = useFormContext();
 
   const { multiple } = other;
 
   return (
-  
+    <>
             <Autocomplete
               {...field}
               id={`autocomplete-${name}`}
               autoHighlight={!multiple}
               disableCloseOnSelect={multiple}
+              onChange={(event, newValue) => setValue(name, newValue, { shouldValidate: true })}
               renderOption={(props, option) => {
                 const country = getCountry(option);
 
@@ -103,10 +104,33 @@ export default function RHFAutocomplete({ name, label, type, helperText, placeho
               }
               {...other}
             />
-          );
-        }
+     
+          <Autocomplete
+            {...field}
+            id={`autocomplete-${name}`}
+            onChange={(event, newValue) => setValue(name, newValue, { shouldValidate: true })}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label={label}
+                placeholder={placeholder}
+                error={!!error}
+                helperText={error ? error?.message : helperText}
+                inputProps={{
+                  ...params.inputProps,
+                  autoComplete: 'new-password',
+                }}
+              />
+            )}
+            {...other}
+          />
+        
+  </>
+  )}
 
-       
+
+// ----------------------------------------------------------------------
+
 export function getCountry(inputValue) {
   const option = countries.filter((country) => country.label === inputValue)[0];
 

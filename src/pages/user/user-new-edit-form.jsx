@@ -12,7 +12,6 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
-import FormControlLabel from '@mui/material/FormControlLabel';
 
 import { countries } from '../../assets/data/countries'
 import { RHFUploadAvatar } from '../../components/hook-form/rhf-upload';
@@ -20,6 +19,7 @@ import RHFSwitch from '../../components/hook-form/rhf-switch';
 import RHFTextField from '../../components/hook-form/rhf-text-field';
 import RHFAutocomplete from '../../components/hook-form/rhf-autocomplete';
 import Label from '../../components/label';
+//import { FormControlLabel } from '@mui/material';
 
 export default function UserNewEditForm({ }) {
 
@@ -132,7 +132,7 @@ export default function UserNewEditForm({ }) {
               />
             </Box>
 
-            {currentUser && (
+            {/* {currentUser && (
               <FormControlLabel
                 labelPlacement="start"
                 label={
@@ -147,7 +147,7 @@ export default function UserNewEditForm({ }) {
                 }
                 sx={{ mx: 0, mb: 3, width: 1, justifyContent: 'space-between' }}
               />
-            )}
+            )} */}
 
             <RHFSwitch
               name="isVerified"

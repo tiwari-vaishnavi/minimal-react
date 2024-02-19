@@ -8,7 +8,7 @@ import { alpha } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-import { UploadIllustration } from 'src/assets/illustrations';
+import { UploadIllustration } from '../../assets/illustrations';
 
 import Iconify from '../iconify';
 import MultiFilePreview from './preview-multi-file';

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Box from '@mui/material/Box';
 
-import Image from '../image';
+import Image from '../../components/image';
 
 // ----------------------------------------------------------------------
 
