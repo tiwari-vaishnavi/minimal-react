@@ -19,7 +19,6 @@ import FullScreenOption from './fullscreen-option';
 import Iconify from '../../iconify';
 import Scrollbar from '../../scrollbar';
 
-// ----------------------------------------------------------------------
 
 export default function SettingsDrawer() {
   const theme = useTheme();
@@ -44,14 +43,14 @@ export default function SettingsDrawer() {
       </Typography>
 
       <Tooltip title="Reset">
-        <IconButton onClick={settings.onReset}>
+        <IconButton>
           <Badge color="error" variant="dot" invisible={!settings.canReset}>
             <Iconify icon="solar:restart-bold" />
           </Badge>
         </IconButton>
       </Tooltip>
 
-      <IconButton onClick={settings.onClose}>
+      <IconButton>
         <Iconify icon="mingcute:close-line" />
       </IconButton>
     </Stack>
@@ -65,7 +64,6 @@ export default function SettingsDrawer() {
 
       <BaseOptions
         value={settings.themeMode}
-        onChange={(newValue) => settings.onUpdate('themeMode', newValue)}
         options={['light', 'dark']}
         icons={['sun', 'moon']}
       />
@@ -80,7 +78,6 @@ export default function SettingsDrawer() {
 
       <BaseOptions
         value={settings.themeContrast}
-        onChange={(newValue) => settings.onUpdate('themeContrast', newValue)}
         options={['default', 'bold']}
         icons={['contrast', 'contrast_bold']}
       />
@@ -95,7 +92,6 @@ export default function SettingsDrawer() {
 
       <BaseOptions
         value={settings.themeDirection}
-        onChange={(newValue) => settings.onUpdate('themeDirection', newValue)}
         options={['ltr', 'rtl']}
         icons={['align_left', 'align_right']}
       />
@@ -110,7 +106,6 @@ export default function SettingsDrawer() {
 
       <LayoutOptions
         value={settings.themeLayout}
-        onChange={(newValue) => settings.onUpdate('themeLayout', newValue)}
         options={['vertical', 'horizontal', 'mini']}
       />
     </div>
@@ -135,7 +130,6 @@ export default function SettingsDrawer() {
 
       <StretchOptions
         value={settings.themeStretch}
-        onChange={() => settings.onUpdate('themeStretch', !settings.themeStretch)}
       />
     </div>
   );
@@ -148,7 +142,6 @@ export default function SettingsDrawer() {
 
       <PresetsOptions
         value={settings.themeColorPresets}
-        onChange={(newValue) => settings.onUpdate('themeColorPresets', newValue)}
       />
     </div>
   );

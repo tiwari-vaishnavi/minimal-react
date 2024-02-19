@@ -34,17 +34,16 @@ export default function NavList({ data, depth, slotProps }) {
     <>
       <NavItem
         open={openMenu}
-        onClick={handleToggleMenu}
         //
-        title={data.title}
-        icon={data.icon}
-        info={data.info}
-        roles={data.roles}
-        caption={data.caption}
-        disabled={data.disabled}
+        title={data?.title}
+        icon={data?.icon}
+        info={data?.info}
+        roles={data?.roles}
+        caption={data?.caption}
+        disabled={data?.disabled}
         //
         depth={depth}
-        hasChild={!!data.children}
+        hasChild={!!data?.children}
         currentRole={slotProps?.currentRole}
         //
         className='active'
