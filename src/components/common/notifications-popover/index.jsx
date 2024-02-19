@@ -80,14 +80,14 @@ export default function NotificationsPopover() {
 
       {!!totalUnRead && (
         <Tooltip title="Mark all as read">
-          <IconButton color="primary" onClick={handleMarkAllAsRead}>
+          <IconButton color="primary">
             <Iconify icon="eva:done-all-fill" />
           </IconButton>
         </Tooltip>
       )}
 
       {!smUp && (
-        <IconButton onClick={drawer.onFalse}>
+        <IconButton>
           <Iconify icon="mingcute:close-line" />
         </IconButton>
       )}
@@ -142,7 +142,6 @@ export default function NotificationsPopover() {
         whileHover="hover"
         variants={varHover(1.05)}
         color={drawer.value ? 'primary' : 'default'}
-        onClick={drawer.onTrue}
       >
         <Badge badgeContent={totalUnRead} color="error">
           <Iconify icon="solar:bell-bing-bold-duotone" width={24} />
@@ -171,7 +170,7 @@ export default function NotificationsPopover() {
           sx={{ pl: 2.5, pr: 1 }}
         >
           {renderTabs}
-          <IconButton onClick={handleMarkAllAsRead}>
+          <IconButton >
             <Iconify icon="solar:settings-bold-duotone" />
           </IconButton>
         </Stack>

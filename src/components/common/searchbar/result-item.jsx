@@ -12,7 +12,6 @@ import Label from '../../label';
 export default function ResultItem({ title, path, groupLabel, onClickItem }) {
   return (
     <ListItemButton
-      onClick={onClickItem}
       sx={{
         borderWidth: 1,
         borderStyle: 'dashed',

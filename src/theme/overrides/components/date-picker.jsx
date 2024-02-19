@@ -2,7 +2,6 @@ import { buttonClasses } from '@mui/material/Button';
 import Iconify from '../../../components/iconify';
 
 
-// ----------------------------------------------------------------------
 
 const dateList = [
   'DatePicker',

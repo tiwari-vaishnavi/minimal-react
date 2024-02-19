@@ -51,8 +51,7 @@ function Group({ subheader, items, slotProps }) {
           <ListSubheader
             disableGutters
             disableSticky
-            onClick={handleToggle}
-            sx={{
+s            sx={{
               fontSize: 11,
               cursor: 'pointer',
               typography: 'overline',

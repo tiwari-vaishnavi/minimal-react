@@ -65,7 +65,7 @@ function Searchbar() {
 
   const renderButton = (
     <Stack direction="row" alignItems="center">
-      <IconButton onClick={search.onTrue}>
+      <IconButton>
         <Iconify icon="eva:search-fill" />
       </IconButton>
 
@@ -104,7 +104,6 @@ function Searchbar() {
             autoFocus
             placeholder="Search..."
             value={searchQuery}
-            onChange={handleSearch}
             startAdornment={
               <InputAdornment position="start">
                 <Iconify icon="eva:search-fill" width={24} sx={{ color: 'text.disabled' }} />
