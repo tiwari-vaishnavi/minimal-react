@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import React from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -53,11 +53,3 @@ export default function EmptyContent({ title, imgUrl, action, filled, descriptio
   );
 }
 
-EmptyContent.propTypes = {
-  action: PropTypes.node,
-  description: PropTypes.string,
-  filled: PropTypes.bool,
-  imgUrl: PropTypes.string,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-};
