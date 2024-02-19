@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import React from 'react';
 
-import { useMockedUser } from '../hooks/use-mocked-user';
+import { useMockedUser } from '../../components/hooks/use-mocked-user';
 
 import Label from '../label';
 

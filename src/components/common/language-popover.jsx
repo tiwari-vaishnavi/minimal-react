@@ -6,9 +6,9 @@ import IconButton from '@mui/material/IconButton';
 
 import { useLocales, useTranslate } from '../locales';
 
-import Iconify from '../iconify';
+import Iconify from '../../components/iconify';
 import { varHover } from '../animate';
-import CustomPopover, { usePopover } from '../custom-popover';
+import CustomPopover, { usePopover } from '../../components/custom-popover';
 
 // ----------------------------------------------------------------------
 

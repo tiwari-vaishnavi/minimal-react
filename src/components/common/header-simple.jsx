@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
 
-import { useOffSetTop } from '../hooks/use-off-set-top';
+import { useOffSetTop } from '../../components/hooks/use-off-set-top';
 
 import { bgBlur } from '../../theme/css';
 

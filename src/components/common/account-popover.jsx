@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 
-import { useMockedUser } from '../hooks/use-mocked-user';
+import { useMockedUser } from '../../components/hooks/use-mocked-user';
 
 import { varHover } from '../animate';
 import CustomPopover, { usePopover } from '../custom-popover';

@@ -1,13 +1,13 @@
 import { m } from 'framer-motion';
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Badge, { badgeClasses } from '@mui/material/Badge';
 
-import Iconify from '../iconify';
+import Iconify from '../../components/iconify';
 import { varHover } from '../animate';
-import { useSettingsContext } from '../settings';
+import { useSettingsContext } from '../../components/settings';
 
 // ----------------------------------------------------------------------
 
@@ -57,6 +57,3 @@ export default function SettingsButton({ sx }) {
   );
 }
 
-SettingsButton.propTypes = {
-  sx: PropTypes.object,
-};
