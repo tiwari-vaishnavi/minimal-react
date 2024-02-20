@@ -86,8 +86,8 @@ const CANDIDATES = [...Array(12)].map((_, index) => ({
   avatarUrl: _mock.image.avatar(index),
 }));
 
-const CONTENT = `
-<h6>Job Description</h6>
+export const CONTENT = `
+<h3>Job Description</h3>
 <br/>
 
 <p>Occaecati est et illo quibusdam accusamus qui. Incidunt aut et molestiae ut facere aut. Est quidem iusto praesentium excepturi harum nihil tenetur facilis. Ut omnis voluptates nihil accusantium doloribus eaque debitis.</p>
@@ -95,7 +95,7 @@ const CONTENT = `
 <br/>
 <br/>
 
-<h6>Key Responsibilities</h6>
+<h3>Key Responsibilities</h3>
 <br/>
 <ul>
   <li>Working with agency for design drawing detail, quotation and local production.</li>
@@ -110,7 +110,7 @@ const CONTENT = `
 <br/>
 <br/>
 
-<h6>Why You'll Love Working Here</h6>
+<h3>Why You'll Love Working Here</h3>
 <br/>
 <ul>
   <li>Working with agency for design drawing detail, quotation and local production.</li>
