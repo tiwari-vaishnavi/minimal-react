@@ -25,7 +25,6 @@ export default function FullScreenOption() {
   return (
     <Box sx={{ p: 2.5 }}>
       <ButtonBase
-        onClick={onToggleFullScreen}
         sx={{
           width: 1,
           height: 48,

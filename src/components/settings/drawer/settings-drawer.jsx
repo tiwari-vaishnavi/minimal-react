@@ -44,14 +44,14 @@ export default function SettingsDrawer() {
       </Typography>
 
       <Tooltip title="Reset">
-        <IconButton onClick={settings.onReset}>
+        <IconButton>
           <Badge color="error" variant="dot" invisible={!settings.canReset}>
             <Iconify icon="solar:restart-bold" />
           </Badge>
         </IconButton>
       </Tooltip>
 
-      <IconButton onClick={settings.onClose}>
+      <IconButton>
         <Iconify icon="mingcute:close-line" />
       </IconButton>
     </Stack>

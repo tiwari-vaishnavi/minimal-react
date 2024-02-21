@@ -65,7 +65,7 @@ function Searchbar() {
 
   const renderButton = (
     <Stack direction="row" alignItems="center">
-      <IconButton onClick={search.onTrue}>
+      <IconButton>
         <Iconify icon="eva:search-fill" />
       </IconButton>
 
