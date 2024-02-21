@@ -24,7 +24,7 @@ function App() {
                 <MotionLazy>
                       <SettingsDrawer />
                       <Layout>
-                   <AccountView />
+                      <AccountView />
                       </Layout>
                 </MotionLazy>
               </ThemeProvider>
