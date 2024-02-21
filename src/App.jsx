@@ -4,8 +4,11 @@ import ThemeProvider from './theme'
 import { SettingsDrawer, SettingsProvider } from './components/settings';
 import {MotionLazy} from './components/animate/motion-lazy'
 import Layout from './components/layout';
+import { LocalizationProvider } from './components/locales';
+import ProductNewEditForm from './pages/product/product-new-edit-form';
 function App() {
   return (
+         <LocalizationProvider>
             <SettingsProvider
               defaultSettings={{
                 themeMode: 'light', // 'light' | 'dark'
@@ -20,10 +23,12 @@ function App() {
                 <MotionLazy>
                       <SettingsDrawer />
                       <Layout>
+                        <ProductNewEditForm/>
                       </Layout>
                 </MotionLazy>
               </ThemeProvider>
             </SettingsProvider>
+            </LocalizationProvider>
   );
 }
 

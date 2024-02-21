@@ -34,8 +34,7 @@ export default function LanguagePopover() {
         whileTap="tap"
         whileHover="hover"
         variants={varHover(1.05)}
-        onClick={popover.onOpen}
-        sx={{
+s        sx={{
           width: 40,
           height: 40,
           ...(popover.open && {
@@ -51,7 +50,6 @@ export default function LanguagePopover() {
           <MenuItem
             key={option.value}
             selected={option.value === currentLang.value}
-            onClick={() => handleChangeLang(option.value)}
           >
             <Iconify icon={option.icon} sx={{ borderRadius: 0.65, width: 28 }} />
 

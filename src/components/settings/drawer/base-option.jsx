@@ -18,8 +18,7 @@ export default function BaseOptions({ icons, options, value, onChange }) {
         return (
           <ButtonBase
             key={option}
-            onClick={() => onChange(option)}
-            sx={{
+s            sx={{
               width: 1,
               height: 80,
               borderRadius: 1,

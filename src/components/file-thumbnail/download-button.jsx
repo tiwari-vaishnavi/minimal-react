@@ -14,7 +14,6 @@ export default function DownloadButton({ onDownload }) {
 
   return (
     <IconButton
-      onClick={onDownload}
       sx={{
         p: 0,
         top: 0,

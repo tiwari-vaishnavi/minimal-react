@@ -29,7 +29,6 @@ export default function ContactsPopover() {
         whileHover="hover"
         variants={varHover(1.05)}
         color={popover.open ? 'inherit' : 'default'}
-        onClick={popover.onOpen}
         sx={{
           ...(popover.open && {
             bgcolor: (theme) => theme.palette.action.selected,

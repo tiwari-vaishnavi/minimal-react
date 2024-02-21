@@ -44,14 +44,14 @@ export default function SettingsDrawer() {
       </Typography>
 
       <Tooltip title="Reset">
-        <IconButton onClick={settings.onReset}>
-          <Badge color="error" variant="dot" invisible={!settings.canReset}>
+        <IconButton>
+          <Badge color="error" variant="dot" invisible={!settings?.canReset}>
             <Iconify icon="solar:restart-bold" />
           </Badge>
         </IconButton>
       </Tooltip>
 
-      <IconButton onClick={settings.onClose}>
+      <IconButton>
         <Iconify icon="mingcute:close-line" />
       </IconButton>
     </Stack>
@@ -64,8 +64,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <BaseOptions
-        value={settings.themeMode}
-        onChange={(newValue) => settings.onUpdate('themeMode', newValue)}
+        value={settings?.themeMode}
         options={['light', 'dark']}
         icons={['sun', 'moon']}
       />
@@ -79,8 +78,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <BaseOptions
-        value={settings.themeContrast}
-        onChange={(newValue) => settings.onUpdate('themeContrast', newValue)}
+        value={settings?.themeContrast}
         options={['default', 'bold']}
         icons={['contrast', 'contrast_bold']}
       />
@@ -94,8 +92,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <BaseOptions
-        value={settings.themeDirection}
-        onChange={(newValue) => settings.onUpdate('themeDirection', newValue)}
+        value={settings?.themeDirection}
         options={['ltr', 'rtl']}
         icons={['align_left', 'align_right']}
       />
@@ -109,8 +106,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <LayoutOptions
-        value={settings.themeLayout}
-        onChange={(newValue) => settings.onUpdate('themeLayout', newValue)}
+        value={settings?.themeLayout}
         options={['vertical', 'horizontal', 'mini']}
       />
     </div>
@@ -134,8 +130,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <StretchOptions
-        value={settings.themeStretch}
-        onChange={() => settings.onUpdate('themeStretch', !settings.themeStretch)}
+        value={settings?.themeStretch}
       />
     </div>
   );
@@ -147,8 +142,7 @@ export default function SettingsDrawer() {
       </Typography>
 
       <PresetsOptions
-        value={settings.themeColorPresets}
-        onChange={(newValue) => settings.onUpdate('themeColorPresets', newValue)}
+        value={settings?.themeColorPresets}
       />
     </div>
   );
@@ -156,8 +150,8 @@ export default function SettingsDrawer() {
   return (
     <Drawer
       anchor="right"
-      open={settings.open}
-      onClose={settings.onClose}
+      open={settings?.open}
+      onClose={settings?.onClose}
       slotProps={{
         backdrop: { invisible: true },
       }}

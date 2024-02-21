@@ -65,7 +65,7 @@ export default function NotificationsPopover() {
 
   const handleMarkAllAsRead = () => {
     setNotifications(
-      notifications.map((notification) => ({
+      notifications?.map((notification) => ({
         ...notification,
         isUnRead: false,
       }))
@@ -80,14 +80,14 @@ export default function NotificationsPopover() {
 
       {!!totalUnRead && (
         <Tooltip title="Mark all as read">
-          <IconButton color="primary" onClick={handleMarkAllAsRead}>
+          <IconButton color="primary">
             <Iconify icon="eva:done-all-fill" />
           </IconButton>
         </Tooltip>
       )}
 
       {!smUp && (
-        <IconButton onClick={drawer.onFalse}>
+        <IconButton>
           <Iconify icon="mingcute:close-line" />
         </IconButton>
       )}
@@ -96,15 +96,15 @@ export default function NotificationsPopover() {
 
   const renderTabs = (
     <Tabs value={currentTab} onChange={handleChangeTab}>
-      {TABS.map((tab) => (
+      {TABS?.map((tab) => (
         <Tab
           key={tab.value}
           iconPosition="end"
-          value={tab.value}
-          label={tab.label}
+          value={tab?.value}
+          label={tab?.label}
           icon={
             <Label
-              variant={((tab.value === 'all' || tab.value === currentTab) && 'filled') || 'soft'}
+              variant={((tab?.value === 'all' || tab?.value === currentTab) && 'filled') || 'soft'}
               color={
                 (tab.value === 'unread' && 'info') ||
                 (tab.value === 'archived' && 'success') ||
@@ -127,7 +127,7 @@ export default function NotificationsPopover() {
   const renderList = (
     <Scrollbar>
       <List disablePadding>
-        {notifications.map((notification) => (
+        {notifications?.map((notification) => (
           <NotificationItem key={notification.id} notification={notification} />
         ))}
       </List>
@@ -142,8 +142,7 @@ export default function NotificationsPopover() {
         whileHover="hover"
         variants={varHover(1.05)}
         color={drawer.value ? 'primary' : 'default'}
-        onClick={drawer.onTrue}
-      >
+s      >
         <Badge badgeContent={totalUnRead} color="error">
           <Iconify icon="solar:bell-bing-bold-duotone" width={24} />
         </Badge>
@@ -171,7 +170,7 @@ export default function NotificationsPopover() {
           sx={{ pl: 2.5, pr: 1 }}
         >
           {renderTabs}
-          <IconButton onClick={handleMarkAllAsRead}>
+          <IconButton>
             <Iconify icon="solar:settings-bold-duotone" />
           </IconButton>
         </Stack>
