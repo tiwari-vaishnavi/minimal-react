@@ -18,7 +18,6 @@ export default function PresetsOptions({ value, onChange }) {
         return (
           <ButtonBase
             key={option.name}
-            onClick={() => onChange(option.name)}
             sx={{
               height: 56,
               borderRadius: 1,

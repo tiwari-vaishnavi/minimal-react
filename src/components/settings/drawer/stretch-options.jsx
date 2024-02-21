@@ -13,7 +13,6 @@ import Iconify from '../../iconify';
 export default function StretchOptions({ value, onChange }) {
   return (
     <ButtonBase
-      onClick={onChange}
       sx={{
         width: 1,
         height: 80,

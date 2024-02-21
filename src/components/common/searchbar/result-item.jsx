@@ -12,10 +12,9 @@ import Label from '../../label';
 export default function ResultItem({ title, path, groupLabel, onClickItem }) {
   return (
     <ListItemButton
-      onClick={onClickItem}
       sx={{
         borderWidth: 1,
-        borderStyle: 'dashed',
+        borderStyle: 'dashed',  
         borderColor: 'transparent',
         borderBottomColor: (theme) => theme.palette.divider,
         '&:hover': {
