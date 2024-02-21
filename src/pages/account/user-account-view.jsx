@@ -12,11 +12,7 @@ import Iconify from '../../components/iconify';
 import { useSettingsContext } from '../../components/settings';
 
 import CustomBreadcrumbs from '../../components/custom-breadcrumbs';
-import AccountGeneral from './account-general';
-import AccountBilling from './account-billing';
-import AccountSocialLinks from './account-social-links';
 import AccountNotifications from './account-notifications';
-import AccountChangePassword from './account-change-password';
 
 // ----------------------------------------------------------------------
 
@@ -85,22 +81,7 @@ export default function AccountView() {
         ))}
       </Tabs>
 
-      {currentTab === 'general' && <AccountGeneral />}
-
-      {currentTab === 'billing' && (
-        <AccountBilling
-          plans={_userPlans}
-          cards={_userPayment}
-          invoices={_userInvoices}
-          addressBook={_userAddressBook}
-        />
-      )}
-
       {currentTab === 'notifications' && <AccountNotifications />}
-
-      {currentTab === 'social' && <AccountSocialLinks socialLinks={_userAbout.socialLinks} />}
-
-      {currentTab === 'security' && <AccountChangePassword />} 
     </Container>
   );
 }
