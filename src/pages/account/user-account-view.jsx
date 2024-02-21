@@ -84,7 +84,23 @@ export default function AccountView() {
           <Tab key={tab.value} label={tab.label} icon={tab.icon} value={tab.value} />
         ))}
       </Tabs>
+
+      {currentTab === 'general' && <AccountGeneral />}
+
+      {currentTab === 'billing' && (
+        <AccountBilling
+          plans={_userPlans}
+          cards={_userPayment}
+          invoices={_userInvoices}
+          addressBook={_userAddressBook}
+        />
+      )}
+
       {currentTab === 'notifications' && <AccountNotifications />}
-  </Container>
+
+      {currentTab === 'social' && <AccountSocialLinks socialLinks={_userAbout.socialLinks} />}
+
+      {currentTab === 'security' && <AccountChangePassword />} 
+    </Container>
   );
 }
