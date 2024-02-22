@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Card from '@mui/material/Card';
@@ -95,9 +95,3 @@ export default function EcommerceSaleByGender({ title, subheader, total, chart, 
   );
 }
 
-EcommerceSaleByGender.propTypes = {
-  chart: PropTypes.object,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-  total: PropTypes.number,
-};

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Card from '@mui/material/Card';
@@ -47,12 +47,7 @@ export default function EcommerceBestSalesman({
   );
 }
 
-EcommerceBestSalesman.propTypes = {
-  subheader: PropTypes.string,
-  tableData: PropTypes.array,
-  tableLabels: PropTypes.array,
-  title: PropTypes.string,
-};
+
 
 // ----------------------------------------------------------------------
 
@@ -90,6 +85,3 @@ function EcommerceBestSalesmanRow({ row }) {
   );
 }
 
-EcommerceBestSalesmanRow.propTypes = {
-  row: PropTypes.object,
-};

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Stack from '@mui/material/Stack';
@@ -76,9 +76,3 @@ export default function EcommerceWelcome({ title, description, action, img, ...o
   );
 }
 
-EcommerceWelcome.propTypes = {
-  action: PropTypes.node,
-  description: PropTypes.string,
-  img: PropTypes.node,
-  title: PropTypes.string,
-};

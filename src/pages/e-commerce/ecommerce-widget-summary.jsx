@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -116,10 +116,3 @@ export default function EcommerceWidgetSummary({ title, percent, total, chart, s
   );
 }
 
-EcommerceWidgetSummary.propTypes = {
-  chart: PropTypes.object,
-  percent: PropTypes.number,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-  total: PropTypes.number,
-};

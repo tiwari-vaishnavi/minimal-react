@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Card from '@mui/material/Card';
@@ -25,11 +25,7 @@ export default function EcommerceSalesOverview({ title, subheader, data, ...othe
   );
 }
 
-EcommerceSalesOverview.propTypes = {
-  data: PropTypes.array,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-};
+
 
 // ----------------------------------------------------------------------
 
@@ -61,6 +57,3 @@ function ProgressItem({ progress }) {
   );
 }
 
-ProgressItem.propTypes = {
-  progress: PropTypes.object,
-};

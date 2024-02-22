@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Card from '@mui/material/Card';
@@ -63,9 +63,3 @@ export default function EcommerceCurrentBalance({
   );
 }
 
-EcommerceCurrentBalance.propTypes = {
-  currentBalance: PropTypes.number,
-  sentAmount: PropTypes.number,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-};

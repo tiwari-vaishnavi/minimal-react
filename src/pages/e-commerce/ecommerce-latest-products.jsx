@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -32,11 +32,6 @@ export default function EcommerceLatestProducts({ title, subheader, list, ...oth
   );
 }
 
-EcommerceLatestProducts.propTypes = {
-  list: PropTypes.array,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-};
 
 // ----------------------------------------------------------------------
 
@@ -80,6 +75,4 @@ function ProductItem({ product }) {
   );
 }
 
-ProductItem.propTypes = {
-  product: PropTypes.object,
-};
+

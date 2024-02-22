@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React, { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
@@ -100,8 +100,3 @@ export default function EcommerceYearlySales({ title, subheader, chart, ...other
   );
 }
 
-EcommerceYearlySales.propTypes = {
-  chart: PropTypes.object,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-};
