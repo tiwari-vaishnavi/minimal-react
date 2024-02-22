@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Stack from '@mui/material/Stack';
@@ -114,6 +114,4 @@ export default function Header({ onOpenNav }) {
   );
 }
 
-Header.propTypes = {
-  onOpenNav: PropTypes.func,
-};
+

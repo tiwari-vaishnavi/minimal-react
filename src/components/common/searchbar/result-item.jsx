@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 
 import Box from '@mui/material/Box';
 import { alpha } from '@mui/material/styles';
@@ -61,9 +61,3 @@ export default function ResultItem({ title, path, groupLabel, onClickItem }) {
   );
 }
 
-ResultItem.propTypes = {
-  groupLabel: PropTypes.string,
-  onClickItem: PropTypes.func,
-  path: PropTypes.array,
-  title: PropTypes.array,
-};

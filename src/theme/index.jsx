@@ -1,6 +1,6 @@
 import React,{ useMemo } from 'react';
 import merge from 'lodash/merge';
-import PropTypes from 'prop-types';
+
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
@@ -75,6 +75,4 @@ export default function ThemeProvider({ children }) {
   );
 }
 
-ThemeProvider.propTypes = {
-  children: PropTypes.node,
-};
+

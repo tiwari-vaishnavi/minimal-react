@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { forwardRef } from 'react';
 import React from 'react';
 import Box from '@mui/material/Box';
@@ -17,15 +17,7 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
 
   const PRIMARY_DARK = theme.palette.primary.dark;
 
-  // OR using local (public folder)
-  // -------------------------------------------------------
-  // const logo = (
-  //   <Box
-  //     component="img"
-  //     src="/logo/logo_single.svg" => your path
-  //     sx={{ width: 40, height: 40, cursor: 'pointer', ...sx }}
-  //   />
-  // );
+ 
 
   const logo = (
     <Box
@@ -86,9 +78,5 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
   );
 });
 
-Logo.propTypes = {
-  disabledLink: PropTypes.bool,
-  sx: PropTypes.object,
-};
 
 export default Logo;

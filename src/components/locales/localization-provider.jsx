@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -18,6 +18,3 @@ export default function LocalizationProvider({ children }) {
   );
 }
 
-LocalizationProvider.propTypes = {
-  children: PropTypes.node,
-};

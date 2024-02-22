@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Stack from '@mui/material/Stack';
@@ -52,9 +52,4 @@ export default function BaseOptions({ icons, options, value, onChange }) {
   );
 }
 
-BaseOptions.propTypes = {
-  icons: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func,
-  options: PropTypes.array,
-  value: PropTypes.string,
-};
+

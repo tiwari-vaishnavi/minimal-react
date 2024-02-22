@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -44,6 +44,3 @@ export default function DownloadButton({ onDownload }) {
   );
 }
 
-DownloadButton.propTypes = {
-  onDownload: PropTypes.func,
-};

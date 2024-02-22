@@ -1,6 +1,5 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 import { varContainer } from './variants';
@@ -36,8 +35,3 @@ export default function MotionContainer({ animate, action = false, children, ...
   );
 }
 
-MotionContainer.propTypes = {
-  action: PropTypes.bool,
-  animate: PropTypes.bool,
-  children: PropTypes.node,
-};

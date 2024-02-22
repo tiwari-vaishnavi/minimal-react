@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import isEqual from 'lodash/isEqual';
 import { useMemo, useState, useEffect, useCallback } from 'react';
 import { SettingsContext } from './settings-context';
@@ -71,7 +71,4 @@ export function SettingsProvider({ children, defaultSettings }) {
   return <SettingsContext.Provider value={memoizedValue}>{children}</SettingsContext.Provider>;
 }
 
-SettingsProvider.propTypes = {
-  children: PropTypes.node,
-  defaultSettings: PropTypes.object,
-};
+

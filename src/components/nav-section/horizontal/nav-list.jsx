@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useRef, useState, useEffect, useCallback } from 'react';
 import React from 'react';
 
@@ -93,11 +93,7 @@ export default function NavList({ data, depth, slotProps }) {
   );
 }
 
-NavList.propTypes = {
-  data: PropTypes.object,
-  depth: PropTypes.number,
-  slotProps: PropTypes.object,
-};
+
 
 // ----------------------------------------------------------------------
 
@@ -111,8 +107,3 @@ function NavSubList({ data, depth, slotProps }) {
   );
 }
 
-NavSubList.propTypes = {
-  data: PropTypes.array,
-  depth: PropTypes.number,
-  slotProps: PropTypes.object,
-};

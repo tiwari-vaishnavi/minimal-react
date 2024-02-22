@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -147,8 +147,3 @@ export default function LayoutOptions({ options, value, onChange }) {
   );
 }
 
-LayoutOptions.propTypes = {
-  onChange: PropTypes.func,
-  options: PropTypes.array,
-  value: PropTypes.string,
-};

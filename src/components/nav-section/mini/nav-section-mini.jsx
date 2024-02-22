@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import Stack from '@mui/material/Stack';
 
@@ -17,10 +17,7 @@ function NavSectionMini({ data, slotProps, ...other }) {
   );
 }
 
-NavSectionMini.propTypes = {
-  data: PropTypes.array,
-  slotProps: PropTypes.object,
-};
+
 
 export default memo(NavSectionMini);
 
@@ -36,7 +33,3 @@ function Group({ items, slotProps }) {
   );
 }
 
-Group.propTypes = {
-  items: PropTypes.array,
-  slotProps: PropTypes.object,
-};

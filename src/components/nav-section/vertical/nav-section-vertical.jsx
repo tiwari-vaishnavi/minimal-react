@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { memo, useState, useCallback } from 'react';
 import React from 'react';
 import Stack from '@mui/material/Stack';
@@ -24,10 +24,6 @@ function NavSectionVertical({ data, slotProps, ...other }) {
   );
 }
 
-NavSectionVertical.propTypes = {
-  data: PropTypes.array,
-  slotProps: PropTypes.object,
-};
 
 export default memo(NavSectionVertical);
 
@@ -82,8 +78,4 @@ function Group({ subheader, items, slotProps }) {
   );
 }
 
-Group.propTypes = {
-  items: PropTypes.array,
-  subheader: PropTypes.string,
-  slotProps: PropTypes.object,
-};
+

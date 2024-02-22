@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -65,7 +65,4 @@ export default function StretchOptions({ value, onChange }) {
   );
 }
 
-StretchOptions.propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.bool,
-};
+

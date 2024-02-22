@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { forwardRef } from 'react';
 
 import Box from '@mui/material/Box';
@@ -133,20 +133,7 @@ const NavItem = forwardRef(
   }
 );
 
-NavItem.propTypes = {
-  open: PropTypes.bool,
-  active: PropTypes.bool,
-  depth: PropTypes.number,
-  icon: PropTypes.element,
-  info: PropTypes.element,
-  title: PropTypes.string,
-  disabled: PropTypes.bool,
-  hasChild: PropTypes.bool,
-  caption: PropTypes.string,
-  externalLink: PropTypes.bool,
-  currentRole: PropTypes.string,
-  roles: PropTypes.arrayOf(PropTypes.string),
-};
+
 
 export default NavItem;
 

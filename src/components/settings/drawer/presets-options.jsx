@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -50,7 +50,4 @@ export default function PresetsOptions({ value, onChange }) {
     </Box>
   );
 }
-PresetsOptions.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
-};
+
