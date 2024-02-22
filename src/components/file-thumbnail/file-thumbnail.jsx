@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+import PropTypes from 'prop-types';
+import React from 'react';
+>>>>>>> Stashed changes
 
 
 import Box from '@mui/material/Box';
