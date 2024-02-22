@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -60,11 +60,3 @@ export default function CarouselArrowIndex({ index, total, onNext, onPrev, icon,
   );
 }
 
-CarouselArrowIndex.propTypes = {
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  index: PropTypes.number,
-  onNext: PropTypes.func,
-  onPrev: PropTypes.func,
-  sx: PropTypes.object,
-  total: PropTypes.number,
-};

@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
 
-import PropTypes from 'prop-types';
 
 import Stack from '@mui/material/Stack';
 
@@ -29,11 +28,6 @@ function NavSectionHorizontal({ data, slotProps, sx, ...other }) {
   );
 }
 
-NavSectionHorizontal.propTypes = {
-  data: PropTypes.array,
-  sx: PropTypes.object,
-  slotProps: PropTypes.object,
-};
 
 export default memo(NavSectionHorizontal);
 
@@ -49,7 +43,3 @@ function Group({ items, slotProps }) {
   );
 }
 
-Group.propTypes = {
-  items: PropTypes.array,
-  slotProps: PropTypes.object,
-};

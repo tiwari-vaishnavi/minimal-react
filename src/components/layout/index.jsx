@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import Box from '@mui/material/Box';
 import { useSettingsContext } from '../settings/context';
@@ -79,6 +79,3 @@ export default function Layout({ children }) {
   );
 }
 
-Layout.propTypes = {
-  children: PropTypes.node,
-};

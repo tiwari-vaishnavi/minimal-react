@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useCallback } from 'react';
 import React from 'react';
 
@@ -81,10 +81,7 @@ export default function BankingCurrentBalance({ list, sx }) {
   );
 }
 
-BankingCurrentBalance.propTypes = {
-  list: PropTypes.array,
-  sx: PropTypes.object,
-};
+
 
 // ----------------------------------------------------------------------
 
@@ -189,6 +186,4 @@ function CardItem({ card }) {
   );
 }
 
-CardItem.propTypes = {
-  card: PropTypes.object,
-};
+

@@ -1,5 +1,5 @@
 import { m } from 'framer-motion';
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -57,6 +57,3 @@ export default function SettingsButton({ sx }) {
   );
 }
 
-SettingsButton.propTypes = {
-  sx: PropTypes.object,
-};

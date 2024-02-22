@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -109,8 +109,4 @@ export default function BankingExpensesCategories({ title, subheader, chart, ...
   );
 }
 
-BankingExpensesCategories.propTypes = {
-  chart: PropTypes.object,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-};
+

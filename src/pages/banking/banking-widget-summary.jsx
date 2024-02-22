@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -134,12 +133,3 @@ export default function BankingWidgetSummary({
   );
 }
 
-BankingWidgetSummary.propTypes = {
-  chart: PropTypes.object,
-  color: PropTypes.string,
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  percent: PropTypes.number,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-  total: PropTypes.number,
-};

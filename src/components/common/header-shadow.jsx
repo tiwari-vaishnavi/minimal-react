@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 
 import Box from '@mui/material/Box';
 
@@ -25,7 +25,3 @@ export default function HeaderShadow({ sx, ...other }) {
     />
   );
 }
-
-HeaderShadow.propTypes = {
-  sx: PropTypes.object,
-};

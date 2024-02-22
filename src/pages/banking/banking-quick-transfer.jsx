@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useState, useEffect, useCallback } from 'react';
 import React from 'react';
 
@@ -261,12 +261,7 @@ export default function BankingQuickTransfer({ title, subheader, list, sx, ...ot
   );
 }
 
-BankingQuickTransfer.propTypes = {
-  list: PropTypes.array,
-  subheader: PropTypes.string,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-};
+
 
 // ----------------------------------------------------------------------
 
@@ -301,13 +296,6 @@ function InputAmount({ autoWidth, amount, onBlur, onChange, sx, ...other }) {
   );
 }
 
-InputAmount.propTypes = {
-  amount: PropTypes.number,
-  autoWidth: PropTypes.number,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  sx: PropTypes.object,
-};
 
 // ----------------------------------------------------------------------
 
@@ -358,12 +346,3 @@ function ConfirmTransferDialog({
   );
 }
 
-ConfirmTransferDialog.propTypes = {
-  amount: PropTypes.number,
-  autoWidth: PropTypes.number,
-  contactInfo: PropTypes.object,
-  onBlur: PropTypes.func,
-  onChange: PropTypes.func,
-  onClose: PropTypes.func,
-  open: PropTypes.bool,
-};

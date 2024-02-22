@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -69,12 +69,6 @@ export default function BankingRecentTransitions({
   );
 }
 
-BankingRecentTransitions.propTypes = {
-  subheader: PropTypes.string,
-  tableData: PropTypes.array,
-  tableLabels: PropTypes.array,
-  title: PropTypes.string,
-};
 
 // ----------------------------------------------------------------------
 
@@ -219,6 +213,4 @@ function BankingRecentTransitionsRow({ row }) {
   );
 }
 
-BankingRecentTransitionsRow.propTypes = {
-  row: PropTypes.object,
-};
+

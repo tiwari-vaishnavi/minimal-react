@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 
 import Box from '@mui/material/Box';
@@ -70,10 +70,3 @@ export default function BankingInviteFriends({ img, price, title, description, s
   );
 }
 
-BankingInviteFriends.propTypes = {
-  description: PropTypes.string,
-  img: PropTypes.string,
-  price: PropTypes.string,
-  sx: PropTypes.object,
-  title: PropTypes.string,
-};

@@ -1,6 +1,5 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 
@@ -31,7 +30,4 @@ export default function MotionViewport({ children, disableAnimatedMobile = true,
   );
 }
 
-MotionViewport.propTypes = {
-  children: PropTypes.node,
-  disableAnimatedMobile: PropTypes.bool,
-};
+

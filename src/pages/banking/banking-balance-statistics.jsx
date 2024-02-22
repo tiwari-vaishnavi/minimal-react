@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import { useState, useCallback } from 'react';
 import React from 'react';
 
@@ -107,8 +107,3 @@ export default function BankingBalanceStatistics({ title, subheader, chart, ...o
   );
 }
 
-BankingBalanceStatistics.propTypes = {
-  chart: PropTypes.object,
-  subheader: PropTypes.string,
-  title: PropTypes.string,
-};

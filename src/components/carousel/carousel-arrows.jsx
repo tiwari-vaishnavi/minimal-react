@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 import React from 'react';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
@@ -114,14 +114,3 @@ export default function CarouselArrows({
   );
 }
 
-CarouselArrows.propTypes = {
-  children: PropTypes.node,
-  filled: PropTypes.bool,
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  leftButtonProps: PropTypes.object,
-  onNext: PropTypes.func,
-  onPrev: PropTypes.func,
-  rightButtonProps: PropTypes.object,
-  shape: PropTypes.oneOf(['circular', 'rounded']),
-  sx: PropTypes.object,
-};
