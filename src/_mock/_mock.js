@@ -13,18 +13,12 @@ import {
   _nativeL,
   _percents,
   _booleans,
-  _sentences,
   _lastNames,
   _fullNames,
   _tourNames,
-  _jobTitles,
-  _taskNames,
   _postTitles,
   _firstNames,
   _fullAddress,
-  _companyNames,
-  _productNames,
-  _descriptions,
   _phoneNumbers,
 } from './assets';
 
@@ -35,14 +29,8 @@ export const _mock = {
   time: (index) => sub(new Date(), { days: index, hours: index }),
   boolean: (index) => _booleans[index],
   role: (index) => _roles[index],
-  // Text
-  taskNames: (index) => _taskNames[index],
   postTitle: (index) => _postTitles[index],
-  jobTitle: (index) => _jobTitles[index],
   tourName: (index) => _tourNames[index],
-  productName: (index) => _productNames[index],
-  sentence: (index) => _sentences[index],
-  description: (index) => _descriptions[index],
   // Contact
   email: (index) => _emails[index],
   phoneNumber: (index) => _phoneNumbers[index],
@@ -51,7 +39,6 @@ export const _mock = {
   firstName: (index) => _firstNames[index],
   lastName: (index) => _lastNames[index],
   fullName: (index) => _fullNames[index],
-  companyName: (index) => _companyNames[index],
   // Number
   number: {
     percent: (index) => _percents[index],

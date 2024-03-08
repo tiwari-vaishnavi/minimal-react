@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-
-=======
 import PropTypes from 'prop-types';
 import React from 'react';
->>>>>>> Stashed changes
 
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';

@@ -1,5 +1,4 @@
 import * as Yup from "yup";
-import PropTypes from "prop-types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, Controller } from "react-hook-form";
 import React, { useMemo, useEffect, useCallback } from "react";
@@ -314,6 +313,4 @@ export default function TourNewEditForm() {
   );
 }
 
-TourNewEditForm.propTypes = {
-  currentTour: PropTypes.object,
-};
+
