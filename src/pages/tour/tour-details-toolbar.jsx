@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -7,11 +6,10 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
-import LoadingButton from '@mui/lab/LoadingButton';
 
 
-import Iconify from '../../components/iconify';
-import CustomPopover, { usePopover } from '../../components/custom-popover';
+import { Popover } from '@mui/material';
+import { Icon } from '@iconify/react';
 
 // ----------------------------------------------------------------------
 
@@ -25,8 +23,18 @@ export default function TourDetailsToolbar({
   sx,
   ...other
 }) {
-  const popover = usePopover();
+  // const popover = usePopover();
+  const [anchorEl, setAnchorEl] = useState(null);
 
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
   return (
     <>
       <Stack
@@ -40,71 +48,80 @@ export default function TourDetailsToolbar({
       >
         <Button
           href={backLink}
-          startIcon={<Iconify icon="eva:arrow-ios-back-fill" width={16} />}
+          startIcon={
+          <Box icon="eva:arrow-ios-back-fill" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+
+        }
         >
           Back
         </Button>
 
         <Box sx={{ flexGrow: 1 }} />
 
-        {publish === 'published' && (
-          <Tooltip title="Go Live">
-            <IconButton href={liveLink}>
-              <Iconify icon="eva:external-link-fill" />
-            </IconButton>
-          </Tooltip>
-        )}
+ 
 
         <Tooltip title="Edit">
           <IconButton href={editLink}>
-            <Iconify icon="solar:pen-bold" />
+            <Box icon="solar:pen-bold" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />
           </IconButton>
         </Tooltip>
 
-        <LoadingButton
-          color="inherit"
-          variant="contained"
-          loading={!publish}
-          loadingIndicator="Loading…"
-          endIcon={<Iconify icon="eva:arrow-ios-downward-fill" />}
-          onClick={popover.onOpen}
-          sx={{ textTransform: 'capitalize' }}
+        <Button
+        onClick={handlePopoverOpen}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
         >
-          {publish}
-        </LoadingButton>
-      </Stack>
-
-      <CustomPopover
-        open={popover.open}
-        onClose={popover.onClose}
-        arrow="top-right"
-        sx={{ width: 140 }}
-      >
+        {publish === 'published' &&
+        <Box icon="eva:cloud-upload-fill" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />}
+        {publish === 'draft' && 
+        <Box icon="solar:file-text-bold" component={Icon}
+        className="component-iconify" sx={{ width:16 , height:16 }} />
+      }
+        {publish}
+        </Button>
+        <Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handlePopoverClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'left',
+        }}
+        >
         {publishOptions.map((option) => (
           <MenuItem
             key={option.value}
             selected={option.value === publish}
             onClick={() => {
-              popover.onClose();
               onChangePublish(option.value);
+              handlePopoverClose(); // Close the popover after selecting an option
             }}
           >
-            {option.value === 'published' && <Iconify icon="eva:cloud-upload-fill" />}
-            {option.value === 'draft' && <Iconify icon="solar:file-text-bold" />}
+            {option.value === 'published' &&
+
+            <Box icon="eva:cloud-upload-fill" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />
+          }
+            {option.value === 'draft' && 
+            <Box icon="solar:file-text-bold" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />
+          }
             {option.label}
           </MenuItem>
         ))}
-      </CustomPopover>
+        </Popover>
+      </Stack>
+
+
     </>
   );
 }
 
-TourDetailsToolbar.propTypes = {
-  backLink: PropTypes.string,
-  editLink: PropTypes.string,
-  liveLink: PropTypes.string,
-  onChangePublish: PropTypes.func,
-  publish: PropTypes.string,
-  publishOptions: PropTypes.array,
-  sx: PropTypes.object,
-};
+

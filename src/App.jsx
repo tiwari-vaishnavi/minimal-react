@@ -2,7 +2,6 @@ import React from 'react';
 import './global.css'
 import ThemeProvider from './theme'
 import { SettingsDrawer, SettingsProvider } from './components/settings';
-import {MotionLazy} from './components/animate/motion-lazy'
 import Layout from './components/layout';
 import TourDetailsPage from './pages/tour/details'
 function App() {
@@ -18,12 +17,10 @@ function App() {
               }}
             >
               <ThemeProvider>
-                <MotionLazy>
                       <SettingsDrawer />
                       <Layout>
                       <TourDetailsPage/>
                       </Layout>
-                </MotionLazy>
               </ThemeProvider>
             </SettingsProvider>
   );

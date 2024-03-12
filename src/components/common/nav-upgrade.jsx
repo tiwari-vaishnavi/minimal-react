@@ -7,7 +7,7 @@ import React from 'react';
 
 import { useMockedUser } from '../hooks/use-mocked-user';
 
-import Label from '../label';
+
 
 // ----------------------------------------------------------------------
 
@@ -28,7 +28,7 @@ export default function NavUpgrade() {
             {user?.displayName?.charAt(0).toUpperCase()}
           </Avatar>
 
-          <Label
+          <Typography
             color="success"
             variant="filled"
             sx={{
@@ -41,7 +41,7 @@ export default function NavUpgrade() {
             }}
           >
             Free
-          </Label>
+          </Typography>
         </Box>
 
         <Stack spacing={0.5} sx={{ mb: 2, mt: 1.5, width: 1 }}>

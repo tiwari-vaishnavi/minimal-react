@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React,{ useState, useCallback } from 'react';
 
 import Tab from '@mui/material/Tab';
@@ -8,11 +7,11 @@ import Container from '@mui/material/Container';
 
 import { _tours, TOUR_DETAILS_TABS, TOUR_PUBLISH_OPTIONS } from '../../_mock';
 
-import Label from '../../components/label';
 import { useSettingsContext } from '../../components/settings';
 
 import TourDetailsToolbar from './tour-details-toolbar';
 import TourDetailsBookers from './tour-details-bookers';
+import { Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -50,7 +49,7 @@ export default function TourDetailsView({ id }) {
           label={tab.label}
           icon={
             tab.value === 'bookers' ? (
-              <Label variant="filled">{currentTour?.bookers.length}</Label>
+              <Typography variant="filled">{currentTour?.bookers.length}</Typography>
             ) : (
               ''
             )
@@ -62,12 +61,14 @@ export default function TourDetailsView({ id }) {
 
   return (
     <Container maxWidth={settings.themeStretch ? false : 'lg'}>
-      <TourDetailsToolbar
-        liveLink="#"
-        publish={publish || ''}
-        onChangePublish={handleChangePublish}
-        publishOptions={TOUR_PUBLISH_OPTIONS}
-      />
+
+    <TourDetailsToolbar
+    liveLink="#"
+    publish={publish || ''}
+    onChangePublish={handleChangePublish}
+    publishOptions={TOUR_PUBLISH_OPTIONS}
+  />
+   
       {renderTabs}
 
       {currentTab === 'bookers' && <TourDetailsBookers bookers={currentTour?.bookers} />}
@@ -77,6 +78,3 @@ export default function TourDetailsView({ id }) {
   );
 }
 
-TourDetailsView.propTypes = {
-  id: PropTypes.string,
-};

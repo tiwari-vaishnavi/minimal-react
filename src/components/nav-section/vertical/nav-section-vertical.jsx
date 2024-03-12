@@ -1,4 +1,3 @@
-
 import { memo, useState, useCallback } from 'react';
 import React from 'react';
 import Stack from '@mui/material/Stack';
@@ -23,7 +22,6 @@ function NavSectionVertical({ data, slotProps, ...other }) {
     </Stack>
   );
 }
-
 
 export default memo(NavSectionVertical);
 
@@ -77,5 +75,3 @@ function Group({ subheader, items, slotProps }) {
     </Stack>
   );
 }
-
-

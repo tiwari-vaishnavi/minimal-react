@@ -9,7 +9,6 @@ import { useMockedUser } from '../hooks/use-mocked-user';
 
 import { bgBlur } from '../../theme/css';
 
-import Scrollbar from '../scrollbar';
 import { NavSectionHorizontal } from '../nav-section';
 
 import { HEADER } from '../layout/config-layout';
@@ -35,11 +34,11 @@ function NavHorizontal() {
       <Toolbar
         sx={{
           ...bgBlur({
-            color: theme.palette.background.default,
+            color: "#FFFFFF",
           }),
         }}
       >
-        <Scrollbar
+        <Box
           sx={{
             '& .simplebar-content': {
               display: 'flex',
@@ -55,7 +54,7 @@ function NavHorizontal() {
               ...theme.mixins.toolbar,
             }}
           />
-        </Scrollbar>
+        </Box>
       </Toolbar>
 
       <HeaderShadow />

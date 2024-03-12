@@ -1,5 +1,4 @@
 import { memo } from 'react';
-
 import React from 'react';
 
 import Stack from '@mui/material/Stack';
@@ -28,7 +27,6 @@ function NavSectionHorizontal({ data, slotProps, sx, ...other }) {
     </Stack>
   );
 }
-
 
 
 export default memo(NavSectionHorizontal);

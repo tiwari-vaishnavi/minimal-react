@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { useState, useCallback } from 'react';
 
@@ -11,7 +10,7 @@ import { alpha } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 
-import Iconify from '../../components/iconify';
+import { Icon } from '@iconify/react';
 
 // ----------------------------------------------------------------------
 
@@ -51,15 +50,12 @@ export default function TourDetailsBookers({ bookers }) {
   );
 }
 
-TourDetailsBookers.propTypes = {
-  bookers: PropTypes.array,
-};
 
 // ----------------------------------------------------------------------
 
 function BookerItem({ booker, selected, onSelected }) {
   return (
-    <Stack component={Card} direction="row" spacing={2} key={booker.id} sx={{ p: 3 }}>
+    <Stack component={Card} direction="row" spacing={2} key={booker.id} sx={{ p: 3 }} alignItems="flex-start">
       <Avatar alt={booker.name} src={booker.avatarUrl} sx={{ width: 48, height: 48 }} />
 
       <Stack spacing={2} flexGrow={1}>
@@ -67,7 +63,8 @@ function BookerItem({ booker, selected, onSelected }) {
           primary={booker.name}
           secondary={
             <Stack direction="row" alignItems="center" spacing={0.5}>
-              <Iconify icon="solar:users-group-rounded-bold" width={16} />
+              <Box icon="solar:users-group-rounded-bold" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />
               {booker.guests} guests
             </Stack>
           }
@@ -91,7 +88,9 @@ function BookerItem({ booker, selected, onSelected }) {
               },
             }}
           >
-            <Iconify width={18} icon="solar:phone-bold" />
+
+            <Box icon="solar:phone-bold" component={Icon}
+            className="component-iconify" sx={{ width:18 , height:18 }} />
           </IconButton>
 
           <IconButton
@@ -105,7 +104,9 @@ function BookerItem({ booker, selected, onSelected }) {
               },
             }}
           >
-            <Iconify width={18} icon="solar:chat-round-dots-bold" />
+
+            <Box icon="solar:chat-round-dots-bold" component={Icon}
+            className="component-iconify" sx={{ width:18 , height:18 }} />
           </IconButton>
 
           <IconButton
@@ -119,7 +120,8 @@ function BookerItem({ booker, selected, onSelected }) {
               },
             }}
           >
-            <Iconify width={18} icon="fluent:mail-24-filled" />
+            <Box icon="fluent:mail-24-filled" component={Icon}
+            className="component-iconify" sx={{ width:18 , height:18 }} />
           </IconButton>
         </Stack>
       </Stack>
@@ -129,7 +131,9 @@ function BookerItem({ booker, selected, onSelected }) {
         variant={selected ? 'text' : 'outlined'}
         color={selected ? 'success' : 'inherit'}
         startIcon={
-          selected ? <Iconify width={18} icon="eva:checkmark-fill" sx={{ mr: -0.75 }} /> : null
+          selected ? 
+          <Box icon="eva:checkmark-fill" component={Icon}
+          className="component-iconify" sx={{ width:18 , height:18 }} />: null
         }
         onClick={onSelected}
       >
@@ -139,8 +143,3 @@ function BookerItem({ booker, selected, onSelected }) {
   );
 }
 
-BookerItem.propTypes = {
-  booker: PropTypes.object,
-  onSelected: PropTypes.func,
-  selected: PropTypes.bool,
-};
