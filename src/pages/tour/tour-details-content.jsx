@@ -1,7 +1,5 @@
 import { m } from 'framer-motion';
 import React from 'react';
-import PropTypes from 'prop-types';
-
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
@@ -10,16 +8,10 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ListItemText from '@mui/material/ListItemText';
-
 import { fDate } from '../../components/utils/format-time';
-
 import { TOUR_SERVICE_OPTIONS, _tourGuides } from '../../_mock';
-
 import Image from '../../components/image';
-import Iconify from '../../components/iconify';
-import Markdown from '../../components/markdown';
-import { varTranHover } from '../../components/animate';
-import Lightbox, { useLightBox } from '../../components/lightbox';
+import { Icon } from '@iconify/react';
 
 // ----------------------------------------------------------------------
 
@@ -40,12 +32,7 @@ export default function TourDetailsContent({ tour }) {
     src: slide,
   }));
 
-  const {
-    selected: selectedImage,
-    open: openLightbox,
-    onOpen: handleOpenLightbox,
-    onClose: handleCloseLightbox,
-  } = useLightBox(slides);
+
 
   const renderGallery = (
     <>
@@ -66,13 +53,13 @@ export default function TourDetailsContent({ tour }) {
           variants={{
             hover: { opacity: 0.8 },
           }}
-          transition={varTranHover()}
+        
         >
           <Image
             alt={slides[0].src}
-            src={slides[0].src}
+            src="https://i.ibb.co/Fq3Jt8D/travel-2.jpg"
             ratio="1/1"
-            onClick={() => handleOpenLightbox(slides[0].src)}
+            
             sx={{ borderRadius: 2, cursor: 'pointer' }}
           />
         </m.div>
@@ -85,13 +72,13 @@ export default function TourDetailsContent({ tour }) {
               variants={{
                 hover: { opacity: 0.8 },
               }}
-              transition={varTranHover()}
+              
             >
               <Image
                 alt={slide.src}
-                src={slide.src}
+                src="https://i.ibb.co/tsNywBj/travel-3.jpg"
                 ratio="1/1"
-                onClick={() => handleOpenLightbox(slide.src)}
+              
                 sx={{ borderRadius: 2, cursor: 'pointer' }}
               />
             </m.div>
@@ -99,12 +86,7 @@ export default function TourDetailsContent({ tour }) {
         </Box>
       </Box>
 
-      <Lightbox
-        index={selectedImage}
-        slides={slides}
-        open={openLightbox}
-        close={handleCloseLightbox}
-      />
+
     </>
   );
 
@@ -112,41 +94,54 @@ export default function TourDetailsContent({ tour }) {
     <>
       <Stack direction="row" sx={{ mb: 3 }}>
         <Typography variant="h4" sx={{ flexGrow: 1 }}>
-          {name}
+        Historic Heritage Tour
         </Typography>
 
         <IconButton>
-          <Iconify icon="solar:share-bold" />
+          <Box icon="solar:share-bold" component={Icon}
+            className="component-iconify" sx={{ width:16 , height:16 }} />
         </IconButton>
 
         <Checkbox
           defaultChecked
-          color="error"
-          icon={<Iconify icon="solar:heart-outline" />}
-          checkedIcon={<Iconify icon="solar:heart-bold" />}
+          color="error"  
+           icon={
+       
+          <Box icon="solar:heart-outline" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+        }
+          checkedIcon={
+          <Box icon="solar:heart-bold" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+        }
         />
       </Stack>
 
-      <Stack spacing={3} direction="row" flexWrap="wrap" alignItems="center">
+      <Stack spacing={3} direction="row" flexWrap="wrap" alignItems="center" gap="10px">
         <Stack direction="row" alignItems="center" spacing={0.5} sx={{ typography: 'body2' }}>
-          <Iconify icon="eva:star-fill" sx={{ color: 'warning.main' }} />
+      
+
+          <Box icon="eva:star-fill" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 ,color: 'warning.main'}} />
           <Box component="span" sx={{ typography: 'subtitle2' }}>
             {ratingNumber}
           </Box>
           <Link sx={{ color: 'text.secondary' }}>(234 reviews)</Link>
         </Stack>
 
-        <Stack direction="row" alignItems="center" spacing={0.5} sx={{ typography: 'body2' }}>
-          <Iconify icon="mingcute:location-fill" sx={{ color: 'error.main' }} />
-          {destination}
+        <Stack direction="row" alignItems="center" gap="5px" spacing={0.5} sx={{ typography: 'body2' }}>
+          <Box icon="mingcute:location-fill" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 , color: 'error.main' }} />
+          India
         </Stack>
 
-        <Stack direction="row" alignItems="center" spacing={0.5} sx={{ typography: 'subtitle2' }}>
-          <Iconify icon="solar:flag-bold" sx={{ color: 'info.main' }} />
+        <Stack direction="row" alignItems="center" spacing={0.5} gap="10px" sx={{ typography: 'subtitle2' }}>
+        <Box icon="solar:flag-bold" component={Icon}
+        className="component-iconify" sx={{ width:20 , height:20 , color: 'info.main' }} />
           <Box component="span" sx={{ typography: 'body2', color: 'text.secondary' }}>
             Guide by
           </Box>
-          {_tourGuides.map((tourGuide) => tourGuide.name).join(', ')}
+          Lucian Obrien, Deja Brady
         </Stack>
       </Stack>
     </>
@@ -165,22 +160,36 @@ export default function TourDetailsContent({ tour }) {
         {
           label: 'Available',
           value: `${fDate(available.startDate)} - ${fDate(available.endDate)}`,
-          icon: <Iconify icon="solar:calendar-date-bold" />,
+          icon: 
+          <Box icon="solar:calendar-date-bold" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+          ,
         },
         {
           label: 'Contact name',
-          value: tourGuides.map((tourGuide) => tourGuide.phoneNumber).join(', '),
-          icon: <Iconify icon="solar:user-rounded-bold" />,
+          value: 'Lucian Obrien, Deja Brady',
+          icon:
+          <Box icon="solar:user-rounded-bold" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+          ,
         },
         {
           label: 'Durations',
           value: durations,
-          icon: <Iconify icon="solar:clock-circle-bold" />,
+          icon: 
+          <Box icon="solar:clock-circle-bold" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+          ,
         },
         {
           label: 'Contact phone',
-          value: tourGuides.map((tourGuide) => tourGuide.name).join(', '),
-          icon: <Iconify icon="solar:phone-bold" />,
+          value: '904-966-2836, 399-757-9909',
+          icon: 
+
+          <Box icon="solar:phone-bold" component={Icon}
+          className="component-iconify" sx={{ width:16 , height:16 }} />
+
+          ,
         },
       ].map((item) => (
         <Stack key={item.label} spacing={1.5} direction="row">
@@ -206,7 +215,7 @@ export default function TourDetailsContent({ tour }) {
 
   const renderContent = (
     <>
-      <Markdown children={content} />
+      
 
       <Stack spacing={2}>
         <Typography variant="h6"> Services</Typography>
@@ -222,7 +231,7 @@ export default function TourDetailsContent({ tour }) {
           {TOUR_SERVICE_OPTIONS.map((service) => (
             <Stack
               key={service.label}
-              spacing={1}
+              spacing={2}
               direction="row"
               alignItems="center"
               sx={{
@@ -231,15 +240,10 @@ export default function TourDetailsContent({ tour }) {
                 }),
               }}
             >
-              <Iconify
-                icon="eva:checkmark-circle-2-outline"
-                sx={{
-                  color: 'primary.main',
-                  ...(services.includes(service.label) && {
-                    color: 'text.disabled',
-                  }),
-                }}
-              />
+
+
+              <Box icon="eva:checkmark-circle-2-outline" component={Icon}
+              className="component-iconify" sx={{ width:16 , height:16  }} />
               {service.label}
             </Stack>
           ))}
@@ -267,6 +271,3 @@ export default function TourDetailsContent({ tour }) {
   );
 }
 
-TourDetailsContent.propTypes = {
-  tour: PropTypes.object,
-};

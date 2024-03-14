@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React,{ useState, useCallback } from 'react';
 
 import Tab from '@mui/material/Tab';
@@ -8,18 +7,16 @@ import Container from '@mui/material/Container';
 
 import { _tours, TOUR_DETAILS_TABS, TOUR_PUBLISH_OPTIONS } from '../../_mock';
 
-import Label from '../../components/label';
 import { useSettingsContext } from '../../components/settings';
 
 import TourDetailsToolbar from './tour-details-toolbar';
 import TourDetailsContent from './tour-details-content';
+import { Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
 export default function TourDetailsView({ id }) {
   const settings = useSettingsContext();
-  // console.log(_tours);
-
   const currentTour = _tours[0];
   console.log( currentTour)
 
@@ -49,13 +46,7 @@ export default function TourDetailsView({ id }) {
           iconPosition="end"
           value={tab.value}
           label={tab.label}
-          icon={
-            tab.value === 'bookers' ? (
-              <Label variant="filled">{currentTour?.bookers.length}</Label>
-            ) : (
-              ''
-            )
-          }
+    
         />
       ))}
     </Tabs>
@@ -77,6 +68,4 @@ export default function TourDetailsView({ id }) {
   );
 }
 
-TourDetailsView.propTypes = {
-  id: PropTypes.string,
-};
+

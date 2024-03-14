@@ -1,15 +1,12 @@
 import { m } from 'framer-motion';
-
 import React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Badge, { badgeClasses } from '@mui/material/Badge';
+import { Icon } from '@iconify/react';
 
-import Iconify from '../iconify';
-import { varHover } from '../animate';
 import { useSettingsContext } from '../settings';
 
-// ----------------------------------------------------------------------
 
 export default function SettingsButton({ sx }) {
   const settings = useSettingsContext();
@@ -42,7 +39,6 @@ export default function SettingsButton({ sx }) {
           component={m.button}
           whileTap="tap"
           whileHover="hover"
-          variants={varHover(1.05)}
           aria-label="settings"
           onClick={settings.onToggle}
           sx={{
@@ -50,10 +46,14 @@ export default function SettingsButton({ sx }) {
             height: 40,
           }}
         >
-          <Iconify icon="solar:settings-bold-duotone" width={24} />
+          <Box
+    component={Icon}
+    className="component-iconify"
+    icon={"solar:settings-bold-duotone"}
+    sx={{ width:24, height:24 }}
+  />
         </IconButton>
       </Box>
     </Badge>
   );
 }
-

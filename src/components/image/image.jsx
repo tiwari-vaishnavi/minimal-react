@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React,{ forwardRef } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -117,25 +116,6 @@ const Image = forwardRef(
   }
 );
 
-Image.propTypes = {
-  afterLoad: PropTypes.func,
-  alt: PropTypes.string,
-  beforeLoad: PropTypes.func,
-  delayMethod: PropTypes.string,
-  delayTime: PropTypes.number,
-  disabledEffect: PropTypes.bool,
-  effect: PropTypes.string,
-  overlay: PropTypes.string,
-  ratio: PropTypes.oneOf(['4/3', '3/4', '6/4', '4/6', '16/9', '9/16', '21/9', '9/21', '1/1']),
-  scrollPosition: PropTypes.object,
-  src: PropTypes.string,
-  sx: PropTypes.object,
-  threshold: PropTypes.number,
-  useIntersectionObserver: PropTypes.bool,
-  visibleByDefault: PropTypes.bool,
-  wrapperClassName: PropTypes.string,
-  wrapperProps: PropTypes.object,
-  placeholder: PropTypes.element,
-};
+
 
 export default Image;

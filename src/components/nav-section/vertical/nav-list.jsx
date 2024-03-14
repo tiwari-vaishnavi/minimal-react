@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from 'react';
 import React from 'react';
 
@@ -63,8 +62,6 @@ export default function NavList({ data, depth, slotProps }) {
   );
 }
 
-
-
 // ----------------------------------------------------------------------
 
 function NavSubList({ data, depth, slotProps }) {
@@ -76,5 +73,4 @@ function NavSubList({ data, depth, slotProps }) {
     </>
   );
 }
-
 

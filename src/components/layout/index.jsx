@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Box from '@mui/material/Box';
 import { useSettingsContext } from '../settings/context';
-import { useResponsive } from '../common/hooks/use-responsive';
+import { useResponsive } from '../hooks/use-responsive';
 import { useBoolean } from '../hooks/use-boolean';
 import NavMini from './nav-mini';
 import NavHorizontal from './nav-horizontal';
@@ -43,7 +42,7 @@ export default function Layout({ children }) {
   if (isMini) {
     return (
       <>
-        {/* <Header onOpenNav={nav.onTrue} /> */}
+        <Header onOpenNav={nav.onTrue} />
 
         <Box
           sx={{
@@ -54,7 +53,7 @@ export default function Layout({ children }) {
         >
           {lgUp ? renderNavMini : renderNavVertical}
 
-          {/* <Main>{children}</Main> */}
+          <Main>{children}</Main>
         </Box>
       </>
     );
@@ -78,4 +77,3 @@ export default function Layout({ children }) {
     </>
   );
 }
-

@@ -1,7 +1,6 @@
 import React,{ useMemo } from 'react';
 import merge from 'lodash/merge';
 
-
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 
@@ -14,7 +13,6 @@ import { typography } from './typography';
 // options
 import RTL from './options/right-to-left';
 import { customShadows } from './custom-shadows';
-import { componentsOverrides } from './overrides';
 import { createPresets } from './options/presets';
 import { createContrast } from './options/contrast';
 import { useLocales } from '../components/locales';
@@ -58,8 +56,6 @@ export default function ThemeProvider({ children }) {
 
   const theme = createTheme(memoizedValue);
 
-  theme.components = merge(componentsOverrides(theme), contrast.components);
-
   const themeWithLocale = useMemo(
     () => createTheme(theme, currentLang.systemValue),
     [currentLang.systemValue, theme]
@@ -74,5 +70,3 @@ export default function ThemeProvider({ children }) {
     </MuiThemeProvider>
   );
 }
-
-

@@ -1,20 +1,13 @@
 import React, { useMemo } from 'react';
-
-
 import { useTranslate } from '../locales';
-
-import Label from '../label';
-import Iconify from '../iconify';
+import { Icon } from '@iconify/react';
 import SvgColor from '../svg-color';
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
-// ----------------------------------------------------------------------
 
 const icon = (name) => (
   <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />
-  // OR
-  // <Iconify icon="fluent:mail-24-filled" />
-  // https://icon-sets.iconify.design/solar/
-  // https://www.streamlinehq.com/icons
 );
 
 const ICONS = {
@@ -186,7 +179,7 @@ export function useNavData() {
           {
             title: t('mail'),
             icon: ICONS.mail,
-            info: <Label color="error">+32</Label>,
+            info: <Typography color="error">+32</Typography>,
           },
 
           // CHAT
@@ -265,14 +258,15 @@ export function useNavData() {
             icon: ICONS.disabled,
             disabled: true,
           },
+          
           {
             title: t('item_label'),
             path: '#label',
             icon: ICONS.label,
             info: (
-              <Label color="info" startIcon={<Iconify icon="solar:bell-bing-bold-duotone" />}>
+              <Typography color="info" startIcon={<Box component={Icon} className="component-iconify" icon={'solar:bell-bing-bold-duotone'}/>}>
                 NEW
-              </Label>
+              </Typography>
             ),
           },
           {

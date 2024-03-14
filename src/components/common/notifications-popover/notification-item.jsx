@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -11,7 +10,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 import { fToNow } from '../../utils/format-time';
 
-import Label from '../../label';
 import FileThumbnail from '../../file-thumbnail';
 
 // ----------------------------------------------------------------------
@@ -179,13 +177,13 @@ export default function NotificationItem({ notification }) {
 
   const tagsAction = (
     <Stack direction="row" spacing={0.75} flexWrap="wrap" sx={{ mt: 1.5 }}>
-      <Label variant="outlined" color="info">
+      <Typography variant="outlined" color="info">
         Design
-      </Label>
-      <Label variant="outlined" color="warning">
+      </Typography>
+      <Typography variant="outlined" color="warning">
         Dashboard
-      </Label>
-      <Label variant="outlined">Design system</Label>
+      </Typography>
+      <Typography variant="outlined">Design system</Typography>
     </Stack>
   );
 
@@ -206,7 +204,7 @@ export default function NotificationItem({ notification }) {
       sx={{
         p: 2.5,
         alignItems: 'flex-start',
-        borderBottom: (theme) => `dashed 1px ${theme.palette.divider}`,
+        borderBottom: (theme) => `dashed 1px ${"rgba(145, 158, 171, 0.2)"}`,
       }}
     >
       {renderUnReadBadge}

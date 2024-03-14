@@ -83,19 +83,11 @@ const CONTENT = `
 <br/>
 `;
 
-const BOOKER = [...Array(12)].map((_, index) => ({
-  id: _mock.id(index),
-  guests: index + 10,
-  name: _mock.fullName(index),
-  avatarUrl: _mock.image.avatar(index),
-}));
+
 
 export const _tourGuides = [...Array(12)].map((_, index) => ({
   id: _mock.id(index),
-  name: _mock.fullName(index),
-  avatarUrl: _mock.image.avatar(index),
-  phoneNumber: _mock.phoneNumber(index),
-}));
+  avatarUrl: _mock.image.avatar(index)}));
 
 export const TRAVEL_IMAGES = [...Array(16)].map((_, index) => _mock.image.travel(index));
 
@@ -135,15 +127,12 @@ export const _tours = [...Array(12)].map((_, index) => {
     available,
     tourGuides,
     destination,
-    bookers: BOOKER,
     content: CONTENT,
     tags: _tags.slice(0, 5),
-    name: _mock.tourName(index),
-    createdAt: _mock.time(index),
+        createdAt: _mock.time(index),
     durations: '4 days 3 nights',
     price: _mock.number.price(index),
     priceSale: _mock.number.price(index),
-    totalViews: _mock.number.nativeL(index),
     ratingNumber: _mock.number.rating(index),
   };
 });

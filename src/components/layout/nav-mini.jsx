@@ -40,7 +40,7 @@ export default function NavMini() {
           height: 1,
           position: 'fixed',
           width: NAV.W_MINI,
-          borderRight: (theme) => `dashed 1px ${theme.palette.divider}`,
+          borderRight: (theme) => `dashed 1px ${"rgba(145, 158, 171, 0.2)"}`,
           ...hideScroll.x,
         }}
       >
